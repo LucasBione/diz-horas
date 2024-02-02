@@ -6,7 +6,7 @@ function carregar() {
     var min = data.getMinutes();
     
     
-    if (hora >= 0 && hora <=9) {
+    if (min >= 0 && min <=9) {
         msg.innerHTML = `A hora atual é <strong>${hora}h${`0` + min}</strong>`;
     } else {
          msg.innerHTML = `A hora atual é <strong>${hora}h${min}</strong>`;
