@@ -5,8 +5,13 @@ function carregar() {
     var hora = data.getHours();
     var min = data.getMinutes();
     
-    msg.innerHTML = `A hora atual é <strong>${hora}h${min}</strong>`;
-
+    
+    if (hora >= 0 && hora <=9) {
+        msg.innerHTML = `A hora atual é <strong>${hora}h${`0` + min}</strong>`;
+    } else {
+         msg.innerHTML = `A hora atual é <strong>${hora}h${min}</strong>`;
+    }
+        
     if (hora >= 0 && hora < 12) {
         //bom dia
         img.src = './assets/fotomanha.png'
